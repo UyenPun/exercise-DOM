@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  background: linear-gradient(
+    135deg,
+    rgb(116, 235, 213) 34%,
+    rgb(159, 172, 230) 100%
+  );
+  overflow: hidden;
+}
+
+/* Header */
+svg {
+  font-size: 15rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+}
+
+.copy {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 3px;
+  letter-spacing: 1px;
+  stroke-dasharray: 8% 30%;
+  stroke-dashoffset: 0%;
+  animation: textAnimation 6s linear infinite;
+}
+
+.copy.copy1 {
+  stroke: #673ab7;
+  animation-delay: -1s;
+}
+
+.copy.copy2 {
+  stroke: #e91e63;
+  animation-delay: -2s;
+}
+
+.copy.copy3 {
+  stroke: #ff5722;
+  animation-delay: -3s;
+}
+
+.copy.copy4 {
+  stroke: #f44336;
+  animation-delay: -4s;
+}
+
+.copy.copy5 {
+  stroke: #ffc107;
+  animation-delay: -5s;
+}
+
+@keyframes textAnimation {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+
+.show-more {
+  outline: none;
+  text-decoration: none;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  border-radius: 4px;
+  background-color: #673ab7;
+  color: #fff;
+  font-size: 5rem;
+  padding: 1rem 1.5rem;
+  transition: 0.25s ease-out;
+}
+
+.show-more:hover {
+  color: #673ab7;
+  background-color: #fff;
+}
+
+/* Exercise */
+.title {
+  text-align: center;
+  padding: 2rem 0;
+  text-transform: uppercase;
+}
+
+.list {
+  font-size: 3rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 40rem);
+  column-gap: 1rem;
+  row-gap: 2px;
+  list-style-type: none;
+}
+
+.list li:hover > a {
+  opacity: 0.85;
+}
+
+.list li a {
+  display: block;
+  border: 1px solid #ffdee9;
+  border-radius: 4px;
+  padding: 1rem;
+  font-size: 22px;
+  text-decoration: none;
+  color: #fff;
+  background-image: linear-gradient(
+    to right,
+    #314755 0%,
+    #26a0da 51%,
+    #314755 100%
+  );
+  transition: 0.25s ease;
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+}
+
+.list li a:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
